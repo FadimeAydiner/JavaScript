@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom</h1>
+    <h1>Dom</h1>
+    <h1>Dom</h1>
+    <p class="text">Lorem ipsum dolor, 
+        sit amet consectetur adipisicing
+         elit. Voluptatibus sed rerum, laborum ex nihil repellat dolorum officia mollitia, incidunt quidem vitae! Incidunt exercitationem minima aspernatur ad 
+        quasi consectetur mollitia 
+        eligendi.</p>
+
+        <button type="button" id="btn">Click</button>
+    <script >
+        //create elements
+        let title=document.querySelector("h1");
+        let text=document.querySelector(".text");
+        let btn=document.querySelector("#btn");
+        let allTittle=document.querySelectorAll("h1");
+
+
+   console.log(title);
+   console.log(text);
+   console.log(btn);
+    
+   console.log(allTittle);
+
+   console.log(title.innerText);
+   //title.innerText=`<em>This is a test with innerText</em>` ;
+   title.innerHTML=`<em>This is a test with innerHTML</em>` ;
+   
+   
+   console.log(text.classList);
+   </script>
+</body>
+</html>

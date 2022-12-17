@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text__blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <input id="num1" type="text"/>
+   
+
+    <button type="button" id="divide" onclick="divide()">Divide</button>
+
+    <p id="result">Result=</p>
+    <script >
+        
+       
+
+            function divide(){
+                //create elements
+            let num1=Number(document.querySelector("#num1").value);
+            let result=document.querySelector("#result");
+            if(num1!=0)
+            {
+                result.innerHTML=`Result= ${num1/5}`;
+            }
+            else
+            {
+                result.innerHTML="Error: You cannot divide with 0";
+            }
+       
+        }
+
+   </script>
+</body>
+</html>

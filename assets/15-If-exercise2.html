@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text__blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <input id="price" type="text"/>
+   
+
+    <button type="button" id="calculate" onclick="calculate()">Divide</button>
+
+    <label id="result"></label>
+    <script >
+        
+       
+
+            function calculate(){
+                //create elements
+            let price=Number(document.querySelector("#price").value);
+            let result=document.querySelector("#result");
+            if(price>=500)
+            {
+                result.innerHTML=`You have %10 discount and Total= ${price-price*0.10}`;
+            }
+            else
+            {
+                result.innerHTML=`Total= ${price}`;
+            }
+       
+        }
+
+   </script>
+</body>
+</html>

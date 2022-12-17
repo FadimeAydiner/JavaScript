@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <input id="num1" type="text"/><br>
+   
+
+    <button type="button" id="hello" onclick="hello()">Hello</button><br>
+
+    <label id="result"></label>
+    <script >
+        
+       
+
+            function hello(){
+                //create elements
+            let num1=document.querySelector("#num1").value;
+           let result=document.querySelector("#result");
+            let len=num1.length;
+            if(len>=2 && len<=50)
+            {
+                result.innerHTML=`Hello`;
+            }
+            else
+            {
+                result.innerHTML=`NaN`;
+            }
+       
+        }
+
+   </script>
+</body>
+</html>
