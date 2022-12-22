@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="city"><button type="button" id="addCity">Add City</button> <br>
+    <button type="button" id="sort">Sort</button>
+    <button type="button" id="reverse">Reverse</button>
+    <button type="button" id="RemoveFirst">Remove First</button>
+    <button type="button" id="RemoveLast">Remove Last</button>
+    <button type="button" id="RemoveAll">Remove All</button>
+    <button type="button" id="Mix">Mix</button>
+  <br>
+    <ul id="list">
+        
+    </ul>
+ 
+    <script >
+        const arr=["Berlin","İstanbul","New York","Amsterdam"];
+       
+      
+        const btnAll= document.querySelectorAll("button");
+
+        for(let k=0;k<btnAll.length;k++)
+    btnAll[k].addEventListener("click",(e)=>{
+
+        switch(e.target.id){
+            case "addCity":
+            let city=document.querySelector("#city").value;
+            
+                if(!city || arr.includes(city)) return;
+                arr.push(city);
+                loadList(arr);
+                break;
+            case "sort":
+                arr.sort();
+                loadList(arr);
+                break;
+            case "reverse":
+                arr.reverse();
+                loadList(arr);
+                break;
+            case "RemoveFirst":
+                arr.shift();
+                loadList(arr);
+                break;
+            case "RemoveLast":
+                arr.pop();
+                loadList(arr);
+                break;
+            case "RemoveAll":
+                arr.splice(0);
+                loadList(arr);
+                break;
+            case "Mix":
+                mix(arr);
+                loadList(arr);
+                break;
+            
+
+        }
+
+        
+        
+
+     });
+
+   
+     const loadList=()=>{
+        let list=document.querySelector("#list");
+        let html="";
+        for(let i=0;i<arr.length;i++)
+        html+=`<li>${arr[i]}</li>`;
+console.log(html);
+        list.innerHTML=html;
+
+     };
+     loadList();
+
+     const mix=()=>{};
+    </script>
+</body>
+</html>

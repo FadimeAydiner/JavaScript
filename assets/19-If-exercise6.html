@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: black;
+            color:white;
+        }
+        .dark{
+            background-color: black;
+            color:white;
+        }
+        .dark button{
+            background-color: white;
+            color:black;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Dark Mode Light Mode</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio, incidunt totam similique fugiat temporibus eligendi nulla praesentium eos, atque voluptatum earum placeat sit veritatis repudiandae vero ex possimus. Repellat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio, incidunt totam similique fugiat temporibus eligendi nulla praesentium eos, atque voluptatum earum placeat sit veritatis repudiandae vero ex possimus. Repellat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio, incidunt totam similique fugiat temporibus eligendi nulla praesentium eos, atque voluptatum earum placeat sit veritatis repudiandae vero ex possimus. Repellat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio, incidunt totam similique fugiat temporibus eligendi nulla praesentium eos, atque voluptatum earum placeat sit veritatis repudiandae vero ex possimus. Repellat.</p>
+    
+    <button type="button" id="btnMode" onclick="darkMode()">DARK MODE</button>
+   <script>
+    let mode="LIGHT MODE";
+    function darkMode(){
+
+        let btnMode=document.querySelector("#btnMode");
+        let body=document.querySelector("body");
+
+       btnMode.innerText=mode;
+
+       if(mode==="LIGHT MODE")
+       {
+        body.classList.add("dark");
+        mode="DARK MODE";
+       }
+       else{
+        body.classList.remove("dark");
+        mode="LIGHT MODE";
+       }
+        
+    }
+   </script>
+   
+</body>
+</html>

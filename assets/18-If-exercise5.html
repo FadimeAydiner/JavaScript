@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <input id="weight" type="text"/><br>
+    <input id="height" type="text"/><br>
+
+    <button type="button" id="ideal" onclick="ideal()">Body Mass</button><br>
+
+    <label id="result"></label>
+    <script >
+        
+       
+
+            function ideal(){
+                //create elements
+            let weight=Number(document.querySelector("#weight").value);
+            let height=Number(document.querySelector("#height").value);
+           let result=document.querySelector("#result");
+            let bms=weight/height**2;
+            if(bms>18.5 && bms<25)
+            {
+                result.innerHTML=`ideal`;
+            }
+            else
+            {
+                result.innerHTML=`NOT ideal`;
+            }
+       
+        }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+   <input type="text" id="num1">
+   
+   <select id="operator">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+   </select>
+   
+   <input type="text" id="num2">
+   <button type="button"id="calculate" onclick="calculate()">Calculate</button><br>
+   <label id="result"></label>
+   <script>
+    function calculate(){
+        let num1=Number(document.querySelector("#num1").value); 
+        let num2=Number(document.querySelector("#num2").value); 
+        let select=document.querySelector("#operator").value;
+        let result=document.querySelector("#result");
+        let cal;
+        switch(select){
+            case "+":
+               cal=num1+num2;
+                break;
+            case "-":
+               cal=num1-num2;
+                break;
+            case "*":
+               cal=num1*num2;
+                break;
+            case "/":
+               cal=num1/num2;
+                break;
+         
+        }
+        result.innerText=`Result is ${cal}`;
+    
+    }
+   </script>
+</body>
+</html>

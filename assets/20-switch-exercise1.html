@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+   <input type="text" id="info">
+   <button type="button"id="discount" onclick="discount()">Calculate</button>
+   <label id="result"></label>
+   <script>
+    function discount(){
+        let info=Number(document.querySelector("#info").value); 
+        let result=document.querySelector("#result");
+
+        switch(true){
+            case info>1500:
+                info*=0.85;
+                break;
+            case info>700:
+                info*=0.87;
+                break;
+            case info>500:
+                info*=0.9;
+                break;
+            case info>300:
+                info*=0.95;
+                break;
+            default:
+                info*=0.98;
+        }
+        result.innerText=`The discounted price is ${info}`;
+    
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+   <input type="text" id="percentage">
+   <button type="button" id="apply" onclick="applyDiscount()">Apply</button>
+   <ul>
+      <li>Graphic Card <span>1000</span>$</li>
+      <li>Monitor <span>100</span>$</li>
+      <li>Keyboard <span>50</span>$</li>
+      <li>Headphone <span>30</span>$</li>
+   </ul>
+  
+
+  
+   <script>
+   
+ function applyDiscount(){
+   let percentage=Number(document.querySelector("#percentage").value);
+   let product;
+
+   for(let i=1;i<=4;i++){
+
+      product=document.querySelector(`li:nth-child(${i}) span`);
+      product.innerText=(product.innerText-(product.innerText*percentage)/100);
+   }
+ }
+
+   
+   </script>
+</body>
+</html>

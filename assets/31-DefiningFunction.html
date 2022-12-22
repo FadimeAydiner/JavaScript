@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+         myFunction();
+        function myFunction(){
+            console.log("This is traditional function");
+        }
+
+        
+        const myExpressionFunction=function(){
+            console.log("This is expression function");
+         
+        };
+        myExpressionFunction();
+        const myArrowFunction= () =>{
+            console.log("This is arrow function");
+         
+        };
+
+        myArrowFunction(); 
+
+        const myArrowFunction2= () =>console.log("This is arrow2 function")
+         
+        
+
+        myArrowFunction2(); 
+       
+
+        const findAge=(myBirthday)=>{
+            let myAge=2022-myBirthday;
+            return myAge;
+        };
+
+        console.log(findAge(1991));
+        
+    </script>
+</body>
+</html>
